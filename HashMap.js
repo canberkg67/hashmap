@@ -4,4 +4,13 @@ export class HashMap {
         this.loadFactor = 0.75;
         this.buckets = new Array(this.capacity);
     }
+
+    hash(key) {
+        let hashCode = 0;
+        const primeNumber = 31;
+        for (let i = 0; i < key.length; i++) {
+            hashCode = hashCode * primeNumber + key.charCodeAt(i);
+        }
+        return hashCode;
+    }
 }
