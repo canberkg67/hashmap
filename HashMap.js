@@ -63,4 +63,14 @@ export class HashMap {
         }
         return false;
     }
+
+    length() {
+        let count = 0;
+        for (let i = 0; i < this.buckets.length; i++) {
+            if (this.buckets[i]) {
+                count += this.buckets[i].length;
+            }
+        }
+        return count;
+    }
 }
