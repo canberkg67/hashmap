@@ -73,4 +73,8 @@ export class HashMap {
         }
         return count;
     }
+    
+    clear() {
+        this.buckets = new Array(this.capacity);
+    }
 }
