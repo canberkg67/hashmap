@@ -90,4 +90,17 @@ export class HashMap {
         }
         return keysArray;
     }
+
+    values() {
+        const valuesArray = [];
+        for (let i = 0; i < this.buckets.length; i++) {
+            const bucket = this.buckets[i];
+            if (bucket) {
+                for (let j = 0; j < bucket.length; j++) {
+                    valuesArray.push(bucket[j][1]);
+                }
+            }
+        }
+        return valuesArray;
+    }
 }
