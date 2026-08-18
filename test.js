@@ -16,3 +16,5 @@ test.set('kite', 'pink')
 test.set('lion', 'golden')
 
 console.log(test);
+console.log(test.keys());
+console.log(test.values());
